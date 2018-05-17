@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ajax</title>
+  <style>
+    html,
+    body {
+      background: #eee;
+      position: relative;
+      color: #555;
+      height: 100%;
+    }
+
+    #box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 450px;
+      height: 400px;
+      margin-left: -250px;
+      margin-top: -300px;
+    }
+
+    h2 {
+      text-align: center;
+      text-shadow: 2px 5px 10px;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    ul li {
+      border-bottom: 1px solid #cccccc;
+    }
+
+    ul li a {
+      color: #555;
+      text-decoration: none;
+      transition: all 0.25ms;
+      display: inline-block;
+      height: 35px;
+      line-height: 35px;
+      width: 100%;
+      padding: 5px 0;
+      padding-left: 25px;
+      font-size: 18px;
+      font-weight: 700;
+      text-shadow: 2px 5px 10px;
+
+    }
+
+    ul li a:hover {
+      color: aquamarine;
+      background: #aaaaaa;
+      text-shadow: 0 0 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id='box'>
+    <h2>Ajax&jQuery中的Ajax常用方法总结</h2>
+    <ul>
+      <li>
+        <a href="./load/load.html">1. load()方法</a>
+      </li>
+      <li>
+        <a href="./get/get.html">2. $.get()方法</a>
+      </li>
+      <li>
+        <a href="./post/post.html">3. $.post()方法</a>
+      </li>
+      <li>
+        <a href="./getScript/getScript.html">4. $.getScript()方法</a>
+      </li>
+      <li>
+        <a href="./getJson/getJson.html">5. $.getJson()方法</a>
+      </li>
+      <li>
+        <a href="./ajax/ajax.html">6. $.ajax()方法</a>
+      </li>
+      <li>
+        <a href="./nativeAjax.html">7. 原生ajax</a>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>
