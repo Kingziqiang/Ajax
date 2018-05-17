@@ -2,7 +2,7 @@
 
   **为了测试方便，我用了node搭建了一个简单的web服务器server.js[],默认端口3000,测试前请先启用[server.js]()文件**
 
-## [pageHome](https://kingziqiang.github.io/ajax)
+## [pageHome](https://kingziqiang.github.io/Ajax)
 
   ---
 
@@ -10,7 +10,7 @@
 
   * **Ajax技术**
 
-    1. [Ajax详解](https://github.com/Kingziqiang/ajax/blob/gh-pages/nativeAjax.html)
+    1. [Ajax详解](https://github.com/Kingziqiang/Ajax/blob/gh-pages/nativeAjax.html)
 
   * **jQuery中常用的Ajax技术**
 
