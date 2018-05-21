@@ -15,7 +15,7 @@
   * **jQuery中常用的Ajax技术**
 
     1. [load()方法]()
-    2. [$.get()方法]()
+    2. [$.get()方法](https://github.com/Kingziqiang/Ajax/blob/gh-pages/get/get.html)
     3. [$.post()方法]()
     4. [$.getScript()方法]()
     5. [$.getJson()方法]()
