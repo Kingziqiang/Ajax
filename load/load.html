@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>load()方法</title>
+</head>
+<body>
+  <h3>load()介绍:</h3>
+  <pre style='font-size: 18px;'>
+    1. load()方法能载入远程的HTML的代码并插入DOM中。
+    2. 语法
+       load(url [,data] [,callback]);
+    3. 发送到服务端的key,value数据  
+    3. callback 无论请求成功与否，只要请求完成就执行callback
+  </pre>
+  <br><br>
+  <hr>
+  <button style="width: 100px;height: 35px;">点击获取页面</button>
+  <div id ='resText'></div>
+  <script src="../jquery.js"></script>
+  <script>
+    $(function(){
+      $("button").click(function () {
+        $('#resText').load('insert.html',{name:"wzq",age:"20"},function () {
+          alert('我不知道请求成功没有，但请求完成了');
+        });
+        //筛选载入HTML 'url select';中间是空格
+        // $('#resText').load('insert.html .ul',{name:"wzq",age:"20"},function () {
+        //   alert('我不知道请求成功没有，但请求完成了');
+        // });
+      })
+    })
+  </script>
+</body>
+</html>
