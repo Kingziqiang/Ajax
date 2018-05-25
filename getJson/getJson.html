@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>$.getJson()</title>
+</head>
+<body>
+  <h3>$.getJson(url,callback)方法介绍</h3>
+    <pre style="font-size: 18px;">
+      1. $.getJson()方法用于加载json文件和$.getScript()方法用法相同
+      2. $.getJson(url,(data)=>{});
+      3. 在回调函数里处理数据
+      
+    </pre>
+    <button style="width: 100px;height: 35px;">点击获取脚本</button>
+    <div class="resText"></div>
+</body>
+<script src="../jquery.js"></script>
+<script>
+  $(function(){
+    $('button').click(function () {
+      $.getScript('test.json',function(data){
+        var html = '';
+        JSON.parse(data).forEach((item ) => {
+          console.log(item);
+        });
+        // $.each(JSON.parse(data),function(commentIndex,comment){
+        //   html+='<h4>+comment["id"]+</h4>:<h4>+comment["name"]+</h4>'
+        //   console.log(commentIndex);
+        // })
+        //  $('#resText').html(html);
+        //console.log(data);
+        
+      });
+    })
+  })
+</script>
+</html>
