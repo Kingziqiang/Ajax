@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>$.getScript()</title>
+</head>
+<body>
+  <h3>$.getScript()方法介绍</h3>
+    <pre style="font-size: 18px;">
+      1. 在需要的时候动态加载js脚本
+      2. 虽然我们可以在需要的时候自己动态常见script标签但是这个更好
+      3.$.getScript(url,callback);
+      4.callback文件加载成功后运行
+    </pre>
+    <button style="width: 100px;height: 35px;">点击获取脚本</button>
+</body>
+<script src="../jquery.js"></script>
+<script>
+  $(function(){
+    $('button').click(function () {
+      $.getScript('test.js',function(){
+        alert('加载成功回调此函数');
+      });
+    })
+  })
+</script>
+</html>
