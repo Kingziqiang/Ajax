@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>$.ajax()</title>
+</head>
+
+<body>
+  <h3>$.ajax()方法介绍:</h3>
+  <pre style="font-size: 18px;">
+    1. $.ajax()方法是jQuery最底层的ajax实现。
+    2. $.ajax(optins):参数如下
+      2.1. url (默认当前页)
+      2.2. type (默认GET)
+      2.3. data 发送到服务器的数据(string或object)
+      2.4. dataType 返回的数据类型
+      2.5. beforeSend 发送前可以修改XMLHttpRequest对象的函数
+      2.6. complete 请求完成后调用
+      2.7. success 请求成功后调用
+      2.8. error 请求失败后调用
+      2.9. global 是否触发全局ajax (默认false)
+  </pre>
+
+  <form action="#" id='form1'>
+    用户名:
+    <input type="text" placeholder="输入用户名" name='usename' id='usename'>
+    <br> 密码:
+    <input type="password" name="pwd" id="pwd">
+    <br>
+    <input type="button" value="GET提交" id='login'>
+    <input type="button" value="POST提交" id='login2'>
+  </form>
+</body>
+<script src="../jquery.js"></script>
+<script>
+  $(function () {
+    $('#login').on('click', function () {
+      // console.log($('#form1').serialize());
+      ajax("GET");
+    });
+    $('#login2').on('click', function () {
+      // console.log($('#form1').serialize());
+      ajax("POST");
+    });
+
+    function ajax(type) {
+      $.ajax({
+        'url': '/ajaxGet&Post',
+        'type': type,
+        'data': $('#form1').serialize(),
+        'dataType': 'json',
+        'success': function (data) {
+          // let use = $('#form1').serializeArray();
+          // console.log(use);
+          console.log(data);
+          if (data.usename == 'wzq' && data.pwd == '123') {
+            alert(type + '登录成功');
+          } else {
+            console.log(`用户名:wzq,密码:123`);
+            alert(type + '请求的密码不对。请打开控制台！！');
+          }
+        },
+        'error': function () {
+          alert('请求失败！！');
+        }
+      })
+    }
+
+
+
+
+
+  })
+</script>
+
+
+</html>
