@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>$.post()方法</title>
+</head>
+<body>
+  <h3>$.post()方法介绍</h3>
+    <pre style="font-size: 18px;">
+      1. $.post()方法使用GET方式来进行异步请求
+      2. $.post(url,[,data][,callback][,type]);
+      3. callback只有response的返回状态是success的时候才回调
+      4. type 返回的数据类型
+
+    </pre>
+    <form action="#" id='form1'>
+        用户名:
+        <input type="text" placeholder="输入用户名" name='username' id='username'>
+        <br> 密码:
+        <input type="password" name="pwd" id="pwd">
+        <br>
+        <input type="button" value="提交" id='login'>
+      </form>
+
+</body>
+<script src="../jquery.js"></script>
+<script>
+  $(function(){
+    $('#login').click(function(){
+      $.get('/postData',{
+        username:$('#username').val(),
+        password:$('#pwd').val(),
+      },function(data ,textStatus){
+        //data:请求的内容
+        //textStatus:请求的状态(success,error,notmodified,timeout)
+        console.log(textStatus);
+        console.log(data);
+        
+        alert('post请求成功');
+      },'json')
+    })
+  })
+</script>
+</html>
