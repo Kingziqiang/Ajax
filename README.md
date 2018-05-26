@@ -14,12 +14,12 @@
 
   * **jQuery中常用的Ajax技术**
 
-    1. [load()方法]()
+    1. [load()方法](https://github.com/Kingziqiang/Ajax/blob/gh-pages/load/load.html)
     2. [$.get()方法](https://github.com/Kingziqiang/Ajax/blob/gh-pages/get/get.html)
-    3. [$.post()方法]()
-    4. [$.getScript()方法]()
-    5. [$.getJson()方法]()
-    6. [$.ajax()方法]()  
+    3. [$.post()方法](https://github.com/Kingziqiang/Ajax/blob/gh-pages/post/post.html)
+    4. [$.getScript()方法](https://github.com/Kingziqiang/Ajax/blob/gh-pages/getScript/getScript.html)
+    5. [$.getJson()方法](https://github.com/Kingziqiang/Ajax/blob/gh-pages/getJson/getJson.html)
+    6. [$.ajax()方法](https://github.com/Kingziqiang/Ajax/blob/gh-pages/ajax/ajax.html)  
 
 
 
